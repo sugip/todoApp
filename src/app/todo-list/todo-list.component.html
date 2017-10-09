@@ -1,0 +1,21 @@
+<h1>Todo List</h1>
+<div *ngFor="let task of tasks" class="task-card">
+  <app-taskcard [task]="task" (onDeleted)="onDeleted($event)"></app-taskcard>  
+</div>
+<ng-template #loading>Loading User Data...</ng-template>
+
+<div class="task-card new">
+  <form autocomplete="off">
+    <md-card>
+      <md-input-container>
+        <input mdInput placeholder="新規" [formControl]="titleFormControl" #titleInput  
+        mdTooltip="最大xx文字" mdTooltipPosition="after" mdTooltipHideDelay="1000" id="newTodoTitle">
+        <md-error *ngIf="titleFormControl.hasError('required')">
+          *必須
+        </md-error>
+      </md-input-container>
+      <button md-button class="card-button" (click)="add(titleInput)" id="addTodo">追加</button>
+    </md-card>
+  </form>
+</div>
+{{errorMessage}}

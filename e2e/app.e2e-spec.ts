@@ -7,8 +7,8 @@ describe('todo-app App', () => {
     page = new TodoAppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display Page title', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!!');
+    expect(page.getParagraphText()).toEqual('Todo List');
   });
 });

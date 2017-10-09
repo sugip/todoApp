@@ -8,4 +8,8 @@ export class TodoAppPage {
   getParagraphText() {
     return element(by.css('app-root h1')).getText();
   }
+
+  addNewTodo() {
+    element(by.id('addTodo')).click();;
+  }
 }

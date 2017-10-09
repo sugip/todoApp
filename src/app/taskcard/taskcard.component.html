@@ -1,0 +1,9 @@
+  <!--<md-card>
+    {{task.title}}
+    <button md-button class="card-button" (click)="delete(task)">削除</button>
+  </md-card>-->
+
+  <md-card [@state]="task.state">
+    {{task.title}}
+     <button md-button class="card-button" (click)="delete()">削除</button>
+  </md-card>

@@ -1,0 +1,17 @@
+.task-card {
+  margin: 10px;
+  width: 50%;
+}
+.task-card md-card {
+  background: #E5E6E7;
+}
+.task-card.new md-card {
+  padding-top: 10px!important;
+  padding-bottom: 10px!important;
+}
+
+.card-button {
+  position: absolute;
+  right: 10px;
+  top: 25%;
+}
