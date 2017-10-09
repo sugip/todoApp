@@ -37,9 +37,7 @@ export class TodoListComponent implements OnInit {
       success => {
         task.state = 'deleted';
         let index = this.tasks.indexOf(task);
-        this.tasks.splice(index);
-        
-        // this.show(); // アニメーションのことを考えるとlistから除外がいい
+        this.tasks.splice(index, 1);
         this.showSuccessMessage('"' + task.title + '" is deleted.');
       },
       error => this.showErrorMessage()
